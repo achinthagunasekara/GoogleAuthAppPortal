@@ -1,0 +1,13 @@
+h1
+{
+	font-size: 12pt;
+	font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+body
+{
+	font-size: 10pt;
+	font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: #ffffff url(../images/main-bg.gif);
+}
