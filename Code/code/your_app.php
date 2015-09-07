@@ -9,4 +9,3 @@
 header( 'Location: /PATH/TO/YOUR/APP' );
 
 ?>
-

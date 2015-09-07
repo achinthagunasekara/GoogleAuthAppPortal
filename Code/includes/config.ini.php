@@ -1,5 +1,5 @@
 ; <?php die(); ?>
 
 [RADIUS]
-server=10.3.80.167
+server=RADIUS_SERVER_IP_HERE
 secret=testing123

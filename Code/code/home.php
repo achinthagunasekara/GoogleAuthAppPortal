@@ -16,4 +16,3 @@ $tpl->assign('user_name', $_SESSION['user_name']);
 $tpl->display('home.tpl');
 
 ?>
-
