@@ -126,7 +126,7 @@ Uncomment the line with "pam" so it should look like this:
         pam
 ```
 
-```Configure PAM
+##Configure PAM
 
 PAM must be configured to use the local Unix password in combination with the Google Authenticator password.
 
