@@ -13,6 +13,11 @@
   Note: IE6 works fine without this fix.
 */
 
+/* 
+ * Archie Gunasekara
+ * 2014
+ */
+
 body {
   min-width: 960px;
 }
