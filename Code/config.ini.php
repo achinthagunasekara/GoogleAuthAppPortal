@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * Archie Gunasekara
+ * Achintha Gunasekara
  * 2014
  */
 
