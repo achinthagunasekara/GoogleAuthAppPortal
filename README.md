@@ -203,13 +203,12 @@ Edit the file /etc/freeradius/clients.conf
 Add the new server as following
 
 ```bash
-		client client_computer_name {
-				ipaddr = 192.168.0.25
-				secret = testing123
-				require_message_authenticator = no
-				nastype = other
-		}
-
+client client_computer_name {
+	ipaddr = 192.168.0.25
+	secret = testing123
+	require_message_authenticator = no
+	nastype = other
+}
 ```
 
 Restart free radius service.
