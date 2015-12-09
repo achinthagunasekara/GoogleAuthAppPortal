@@ -202,7 +202,7 @@ Edit the file /etc/freeradius/clients.conf
 
 Add the new server as following
 
-```conf
+```bash
 client client_computer_name {
 	ipaddr = 192.168.0.25
 	secret = testing123
