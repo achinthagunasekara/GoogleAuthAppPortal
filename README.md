@@ -212,3 +212,7 @@ client client_computer_name {
 ```
 
 Restart free radius service.
+
+```bash
+/etc/init.d/freeredius restart
+```
