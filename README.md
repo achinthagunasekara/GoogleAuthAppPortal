@@ -1,16 +1,16 @@
-#Google Auth App Portal
+# Google Auth App Portal
 
-##Introduction
+## Introduction
 
 More information about Google Authenticator can be found at http://code.google.com/p/google-authenticator/
 
-##Setup the Web Server
+## Setup the Web Server
 
-Apachie or IIS
-Install PHP
-Install Free Radius Lib (Windows DLLs can be found under Supporting items folder)
+* Apachie or IIS
+* Install PHP
+* Install Free Radius Lib (Windows DLLs can be found under Supporting items folder)
 
-##Configuring the Application
+## Configuring the Application
 
 Modify the config.ini.php file in the root directory and update the path
 
@@ -18,7 +18,7 @@ Modify the includes/config.ini.php file to include the Radius server configurait
 
 Modify code/setup.inc.php file to add more Applications
 
-##FreeRadius Server Setup
+## FreeRadius Server Setup
 
 NTP Time Sync Install (Optional)
 
@@ -28,7 +28,7 @@ apt-get update
 apt-get install ntp
 ```
 
-##Install FreeRADIUS and other Necessary Packages
+## Install FreeRADIUS and other Necessary Packages
 
 ```bash
 sudo bash
@@ -36,7 +36,7 @@ apt-get update
 apt-get install build-essential libpam0g-dev freeradius git libqrencode3 
 ```
 
-##Download Google Authenticator Pam Module Source
+## Download Google Authenticator Pam Module Source
 
 ```bash
 cd ~
@@ -46,7 +46,7 @@ make
 make install
 ```
 
-##Configure Local Unix Groups
+## Configure Local Unix Groups
 
 We will need to add a group called 'radius-disabled' to drop users in, when you want to disable access
 
@@ -54,7 +54,7 @@ We will need to add a group called 'radius-disabled' to drop users in, when you 
 addgroup radius-disabled
 ```
 
-##Configure FreeRADIUS
+## Configure FreeRADIUS
 
 FreeRADIUS must run as root for this to work.
 
@@ -126,7 +126,7 @@ Uncomment the line with "pam" so it should look like this:
         pam
 ```
 
-##Configure PAM
+## Configure PAM
 
 PAM must be configured to use the local Unix password in combination with the Google Authenticator password.
 
@@ -152,7 +152,7 @@ auth required pam_unix.so use_first_pass
 #auth required pam_google_authenticator.so secret=/root/.google_authenticator
 ```
 
-##Setup a User
+## Setup a User
 
 ```bash
 adduser testuser
@@ -168,7 +168,7 @@ google-authenticator
 
 If everything worked right you should see a QR code being generated. Scan this code with Google Auth app from your smart phone.
 
-##Test your Configuration
+## Test your Configuration
 
 service freeradius restart
 
@@ -185,7 +185,7 @@ radtest testuser test696720 localhost 18120 testing123
 
 If it works right, you should get something like this:
 
-##Debugging
+## Debugging
 
 If for some strange reason it doesn't work.  You can stop freeradius and start it up in debugging mode like this:
 
